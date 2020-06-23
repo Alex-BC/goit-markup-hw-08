@@ -1,0 +1,109 @@
+.contact {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $primary-white-color;
+}
+
+.info {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.studio-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 45px 10px 46px;
+  min-width: 109px;
+
+  background-color: $accent-text-color;
+  color: $primary-white-color;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.action {
+  display: inline-block;
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.footer {
+  background-color: $foot-primery-color;
+}
+
+.copyright {
+  padding-top: 18px;
+  padding-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+.logo-footer {
+  color: $primary-white-color;
+}
+.footer .container {
+  display: flex;
+  padding-bottom: 28px;
+  padding-top: 48px;
+
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-footer .contact {
+  margin-bottom: 9px;
+}
+
+.social-links {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .logo {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: $primary-white-color;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links-footer:hover,
+.social-links-footer:focus {
+  background-color: $accent-text-color;
+  transition: background-color $transition;
+}

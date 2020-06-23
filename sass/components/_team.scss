@@ -1,0 +1,74 @@
+.team-list .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: $title-text-color;
+}
+
+.team {
+  background: $color-bg-child;
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.team-list-container .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.16;
+  text-align: center;
+}
+.team-list-container {
+  border-radius: 4px;
+  padding-bottom: 24px;
+
+  box-shadow: $modal-box-shadow;
+  background-color: $primary-white-color;
+}
+.team-list-container:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list-container:hover,
+.team-list-container:focus {
+  box-shadow: $modal-box-shadow;
+  cursor: pointer;
+  transition: box-shadow $transition;
+}
+
+.team-list-container .social-links {
+  display: flex;
+}
+.job-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.social-links_icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-links_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: $color-social-links;
+}
+
+.social-links_item:hover,
+.social-links_item:focus {
+  color: $primary-white-color;
+  background-color: $accent-text-color;
+  transition: color $transition, background-color $transition;
+}
+
+.social-links_list:not(:last-child) {
+  margin-right: 10px;
+}
