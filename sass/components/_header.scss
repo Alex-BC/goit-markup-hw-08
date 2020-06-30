@@ -11,97 +11,155 @@
 }
 
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-// .site-nav .link {
-//   position: relative;
-//   display: block;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-//   font-weight: 500;
-//   transition: color $transition;
-//   color: #212121;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   text-decoration: none;
-// }
-
-// .site-nav .link:hover,
-// .site-nav .link:focus {
-//   color: $accent-text-color;
-// }
-
-// .site-nav .link.current {
-//   color: $accent-text-color;
-// }
-
-.site-nav {
-  display: none;
-  //   display: flex;
-  //   margin-left: 86px;
+.site-nav .link {
+  position: relative;
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  transition: color $transition;
+  color: #212121;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: $accent-text-color;
+}
+
+.site-nav .link.current {
+  color: $accent-text-color;
+}
+
+// .site-nav {
+
+//   //   display: flex;
+//   //   margin-left: 86px;
+// }
 
 // .site-nav .item:not(:last-child) {
 //   margin-right: 50px;
 // }
 
-.address {
-  display: none;
-  //   display: flex;
-  //   margin-left: auto;
+// .address {
+
+//     display: flex;
+//     margin-left: auto;
+// }
+
+.address .item + .item {
+  margin-left: 50px;
+}
+.address .item {
+  display: flex;
+  align-items: center;
+  color: $primery-text-color;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-// .address .item + .item {
-//   margin-left: 50px;
-// }
-// .address .item {
-//   display: flex;
-//   align-items: center;
-//   color: $primery-text-color;
-//   text-decoration: none;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-// }
+.address .item:hover,
+address .item:focus {
+  color: $accent-text-color;
+  transition: color $transition;
+}
 
-// .address .item:hover,
-// address .item:focus {
-//   color: $accent-text-color;
-//   transition: color $transition;
-// }
+.mail-icon {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  fill: currentColor;
+}
 
-// .mail-icon {
-//   width: 16px;
-//   height: 11px;
-//   margin-right: 10px;
-//   fill: currentColor;
-// }
+.tel-icon {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: currentColor;
+}
 
-// .tel-icon {
-//   width: 10px;
-//   height: 15px;
-//   margin-right: 10px;
-//   fill: currentColor;
-// }
+.site-nav .link.current::after {
+  opacity: 1;
+}
+.site-nav .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-text-color;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity $transition;
+}
 
-// .site-nav .link.current::after {
-//   opacity: 1;
-// }
-// .site-nav .link::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-//   display: block;
-//   width: 100%;
-//   height: 4px;
-//   background-color: $accent-text-color;
-//   border-radius: 2px;
-//   opacity: 0;
-//   transition: opacity $transition;
-// }
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-width: 480px;
+  width: 100%;
+  height: 393px;
+  padding-top: 20px;
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 4px 8px rgba(0, 0, 0, 0.04);
+
+  text-align: center;
+  &.is-open {
+    display: block;
+  }
+}
+}
+
+.menu-button .icon-menu {
+  width: 40px;
+  height: 40px;
+  // fill: $title-text-color;
+  color: black;
+  // background-color: $title-text-color;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  &:hover,
+  &:focus .icon-menu {
+    fill: $accent-text-color;
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus .icon-cross {
+    fill: $accent-text-color;
+    cursor: pointer;
+  }
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open {
+    .icon-cross {
+      display: block;
+    }
+    .icon-menu {
+      display: none;
+    }
+  }
+}
